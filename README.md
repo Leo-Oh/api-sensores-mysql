@@ -4,11 +4,11 @@
 
 Crear imagen de FastAPI
 
-    sudo docker build -t fastapi-passport:0.1 .
+    sudo docker build -t fastapi-sensors:0.1 .
 
 Correr imagen creada de FastAPI
 
-    sudo docker run --publish 9090:9090 --detach --name api-passport fastapi-passport:0.1 
+    sudo docker run --publish 9095:9095 --detach --name api-sensors fastapi-sensors:0.1
 
 # Docker para la base de datos    
 Eliminamos todos los volúmenes ya que Docker crea volúmenes temporales sin pedirte permiso.
