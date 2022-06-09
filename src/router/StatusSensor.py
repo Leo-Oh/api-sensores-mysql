@@ -13,9 +13,10 @@ statusSensor = APIRouter()
 
 
 @statusSensor.get("/status", response_model=List[StatusSensor])
-def get_all_status():
+def get_status():
   with engine.connect() as conn:
     result = conn.execute(status_sensors.select()).fetchall() 
+
     return result
 
 @statusSensor.get("/status/{where_is}/{sensor}/{place}", response_model=StatusSensor)
